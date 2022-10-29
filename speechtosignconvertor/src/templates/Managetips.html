@@ -1,0 +1,48 @@
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
+<!--<html xmlns="http://www.w3.org/1999/xhtml">-->
+<!--<head>-->
+<!--<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />-->
+<!--<title>Managetips</title>-->
+<!--</head>-->
+{% extends 'adminhomeindex.html' %}
+{% block body %}
+<body>
+
+<table width="344" border="1">
+  <tr>
+    <th width="127" height="37" scope="col">Tips</th>
+    <th width="107" scope="col">Date</th>
+    <th width="88" scope="col">&nbsp;</th>
+  </tr>
+  {%for i in v2 %}
+  <tr>
+    <td height="61">{{i[1]}}</td>
+    <td>{{i[2]}}</td>
+    <td><label>
+      <blockquote>
+        <p>&nbsp;        </p>
+        <p><a href="delete?id={{i[0]}}">DELETE</a></p>
+      </blockquote>
+    </label></td>
+  </tr>
+</table>
+  {% endfor %}
+<form id="form1" name="form1" method="post" action="addtips">
+  <label>
+  <blockquote>
+    <blockquote>
+      <blockquote>
+        <blockquote>
+          <p>
+            <input type="submit" name="Submit2" value="Add" />
+          </p>
+        </blockquote>
+      </blockquote>
+    </blockquote>
+  </blockquote>
+  </label>
+</form>
+<p>&nbsp;</p>
+</body>
+{% endblock %}
+<!--</html>-->
